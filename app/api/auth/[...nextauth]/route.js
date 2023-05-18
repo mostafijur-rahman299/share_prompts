@@ -29,14 +29,14 @@ const handler = NextAuth({
             email: profile.email,
             username: profile.name.replace(" ", "").toLowerCase(),
             image: profile.image,
-          });
+           });
         }
       } catch (error) {
         console.log(error);
         return false;
       }
     },
-  },
+  }
 });
 
 export { handler as GET, handler as POST };
